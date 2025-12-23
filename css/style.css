@@ -1,0 +1,351 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#map {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.mapboxgl-popup {
+  min-width: 350px;
+  font: 12px/20px "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+.map-overlay {
+  font: 12px/20px "Helvetica Neue", Arial, Helvetica, sans-serif;
+  position: fixed;
+  width: 30%;
+  top: 0;
+  left: 0;
+  padding: 10px;
+}
+
+.map-overlay .map-overlay-inner {
+  background-color: #fff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.map-overlay h2 {
+  line-height: 24px;
+  display: block;
+  margin: 0 0 10px;
+}
+
+.map-overlay2 {
+  font: 12px/20px "Helvetica Neue", Arial, Helvetica, sans-serif;
+  position: fixed;
+  width: 6%;
+  bottom: 30px;
+  right: 10px;
+  padding: 10px;
+}
+
+.map-overlay2 .map-overlay-inner2 {
+  background-color: #fff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.map-overlay2 .legend1 .bar {
+  height: 130px;
+  width: 20px;
+  background: linear-gradient(0deg,
+      rgb(15, 89, 174),
+      rgb(245, 218, 97),
+      rgb(157, 12, 12));
+  margin-left: 17px;
+  margin-top: -5px;
+}
+
+.map-overlay2 .legend1 {
+  display: none;
+}
+
+.map-overlay2 .legend2 .bar {
+  height: 130px;
+  width: 20px;
+  background: linear-gradient(180deg,
+      rgb(255, 255, 255),
+      rgb(66, 138, 220),
+      #000000);
+  margin-left: 17px;
+  margin-top: -5px;
+}
+
+.map-overlay input {
+  background-color: transparent;
+  display: inline-block;
+  width: 100%;
+  position: relative;
+  margin: 0;
+  cursor: ew-resize;
+}
+
+.map-overlay3 {
+  font: 12px/20px "Helvetica Neue", Arial, Helvetica, sans-serif;
+  position: fixed;
+  width: 5%;
+  top: 120px;
+  left: 10px;
+  padding: 10px;
+}
+
+.map-overlay3 .sidebar {
+  width: 130px;
+  border-color: #ffffff;
+}
+
+.map-overlay3 .tab {
+  font-size: 12px;
+  height: 27px;
+  width: 130px;
+  background: #eeeeee;
+  line-height: 27px;
+  /*把line-height高度设置和height一样就可以让字体垂直居中*/
+  border-width: 1px 1px 1px 1px;
+  border-style: solid;
+  border-color: #efefef;
+  border-radius: 2px 2px 0px 0px;
+}
+
+.map-overlay3 .reorder {
+  margin-left: 10px;
+}
+
+.map-overlay3 .design:active {
+  position: relative;
+  top: 1px;
+}
+
+.map-overlay3 .navto-nav:hover {
+  background-color: #dcdcdc
+  
+}
+
+.map-overlay3 .navto-nav {
+  font-size: 12px;
+  height: 35px;
+  width: 130px;
+  background: #fbfbfb;
+  line-height: 45px;
+  /*把line-height高度设置和height一样就可以让字体垂直居中*/
+  border-width: 0px 1px 1px 1px;
+  border-style: solid;
+  border-color: #efefef;
+  cursor: pointer;
+}
+
+.map-overlay3 .art-icon {
+  margin-left: 10px;
+  width: 1.78em;
+  height: 2em;
+  content: url(./图标/艺术.svg);
+}
+
+.map-overlay3 .eat-icon {
+  margin-left: 10px;
+  width: 1.78em;
+  height: 2em;
+  content: url(./图标/饮食.svg);
+}
+.map-overlay3 .play-icon {
+  margin-left: 10px;
+  width: 1.78em;
+  height: 2em;
+  content: url(./图标/玩乐.svg);
+}
+.map-overlay3 .jisi-icon {
+  margin-left: 10px;
+  width: 1.78em;
+  height: 2em;
+  content: url(./图标/祭祀.svg);
+}
+
+
+.buttonGroup {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  width: 120px;
+}
+
+.button {
+  width: 120px;
+  height: 40px;
+  margin-top: 10px;
+  box-shadow: inset 0px 1px 0px 0px #ffffff;
+  background: linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+  background-color: #ffffff;
+  border-radius: 6px;
+  border: 1px solid #dcdcdc;
+  display: inline-block;
+  cursor: pointer;
+  color: #666666;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #ffffff;
+}
+
+.button:hover {
+  background: linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
+  background-color: #f6f6f6;
+}
+
+.button:active {
+  position: relative;
+  top: 1px;
+}
+
+.map-overlay4 {
+  font: 12px/20px "Helvetica Neue", Arial, Helvetica, sans-serif;
+  position: fixed;
+  width: 5%;
+  bottom: 80px;
+  left: 10px;
+  padding: 10px;
+  display:none;
+}
+
+.entry-card
+{
+  box-sizing: border-box;
+  position: absolute;
+  width: 470px;
+  z-index: 4;
+  background: #fff;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.08);
+  border-radius: 2px;
+  display: block;
+  bottom: 50px;
+  left: 450px;
+}
+
+.iconClose
+{
+  -webkit-text-size-adjust: none;
+  font-size: 14px;
+  color: #333;
+  font-family: -apple-system,Helvetica Neue,PingFang SC,Microsoft YaHei,Source Han Sans SC,Noto Sans CJK SC,WenQuanYi Micro Hei,arial,sans-serif;
+  box-sizing: border-box;
+  display: inline-block;
+  background: 50% no-repeat;
+  background-size: contain;
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  cursor: pointer;
+  height: 24px;
+  width: 24px;
+  background-image: url(https://static.allhistory.com/online/common/img/icon-close.725a.svg);
+}
+.entry-base
+{
+  -webkit-text-size-adjust: none;
+  font-size: 14px;
+  color: #333;
+  font-family: -apple-system,Helvetica Neue,PingFang SC,Microsoft YaHei,Source Han Sans SC,Noto Sans CJK SC,WenQuanYi Micro Hei,arial,sans-serif;
+  box-sizing: border-box;
+  padding: 16px 16px 0;
+}
+.entry-base{
+  -webkit-text-size-adjust: none;
+  font-size: 14px;
+  color: #333;
+  font-family: -apple-system,Helvetica Neue,PingFang SC,Microsoft YaHei,Source Han Sans SC,Noto Sans CJK SC,WenQuanYi Micro Hei,arial,sans-serif;
+  box-sizing: border-box;
+  display: flex;
+  margin-bottom: 14px;
+}
+.text-info
+{
+  -webkit-text-size-adjust: none;
+  font-size: 14px;
+  color: #333;
+  font-family: -apple-system,Helvetica Neue,PingFang SC,Microsoft YaHei,Source Han Sans SC,Noto Sans CJK SC,WenQuanYi Micro Hei,arial,sans-serif;
+  box-sizing: border-box;
+  vertical-align: top;
+  flex: 1;
+}
+.entry-name
+{
+  -webkit-text-size-adjust: none;
+  color: #333;
+  font-family: -apple-system,Helvetica Neue,PingFang SC,Microsoft YaHei,Source Han Sans SC,Noto Sans CJK SC,WenQuanYi Micro Hei,arial,sans-serif;
+  box-sizing: border-box;
+  vertical-align: top;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  margin-right: 24px;
+}
+entry-desc
+{
+  -webkit-text-size-adjust: none;
+  color: #333;
+  font-family: -apple-system,Helvetica Neue,PingFang SC,Microsoft YaHei,Source Han Sans SC,Noto Sans CJK SC,WenQuanYi Micro Hei,arial,sans-serif;
+  box-sizing: border-box;
+  vertical-align: top;
+  line-height: 20px;
+  font-size: 12px;
+  word-break: break-word;
+  display: -webkit-box;
+  height: 80px;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 4;
+}
+
+
+.map-overlay3 .index-icon {
+  margin-left: 10.5px;
+  width: 1.5em;
+  height: 1.8em;
+  content: url(https://static.allhistory.com/online/view/Map/img/periods-menu.a04b.svg) ;
+}
+
+.map-overlay3 .star-icon {
+  margin-left: 10px;
+  width: 1.78em;
+  height: 2em;
+  content: url(./图标/星象.svg);
+}
+
+.map-overlay3 .weath-icon {
+  margin-left: 10px;
+  width: 1.78em;
+  height: 2em;
+  content: url(./图标/气象.svg);
+}
+.map-overlay3 .poet-icon {
+  margin-left: 10px;
+  width: 1.78em;
+  height: 2em;
+  content: url(./图标/诗词.svg);
+}
+.map-overlay3 .live-icon {
+  margin-left: 10px;
+  width: 1.8em;
+  height: 2em;
+  content: url(./图标/养生.svg);
+}
+
+.map-overlay3 .farm-icon {
+  margin-left: 10px;
+  width: 1.8em;
+  height: 2em;
+  content: url(./图标/农事.svg);
+}
